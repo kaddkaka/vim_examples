@@ -27,3 +27,13 @@ Mapping suggestions:
 nnoremap <a-j> <cmd>cnext<cr>
 nnoremap <a-k> <cmd>cprev<cr>
 ```
+
+### Replace only within selection
+The search [pattern atom](https://vimhelp.org/pattern.txt.html#pattern-atoms) [`\%V`](https://vimhelp.org/pattern.txt.html#%2F%5C%25V) can be used to match inside visual area. This can be used to replace only within a (rectangle) selection.
+
+![sub_in_selection](https://user-images.githubusercontent.com/4508793/143133723-69acd9ba-1516-4d21-a546-b04d9a84e622.gif)
+
+Mapping suggestions:
+```
+xnoremap s :s/\%V
+```
