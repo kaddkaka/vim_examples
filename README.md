@@ -13,3 +13,17 @@
 ![norm_q](https://user-images.githubusercontent.com/4508793/143023739-894e32bf-c1f7-4a50-8c03-19b0771fb87b.gif)
 
 [`:h q`](https://vimhelp.org/repeat.txt.html#q), [`:h norm`](https://vimhelp.org/various.txt.html#%3Anorm) (key sequence: `qqIconst ^[A;^[qjVjjj:norm @q^M`, q register content: `Iconst ^[A;^[`)
+
+### Navigate quickfix list
+The [quickfix list](https://vimhelp.org/quickfix.txt.html#quickfix) can be populated with locations in several ways. A key to using it effectively is to have mappings for [`:cnext`](https://vimhelp.org/quickfix.txt.html#%3Acnext) and [`:cprev`](https://vimhelp.org/quickfix.txt.html#%3Acprev).
+
+- [`:vimgrep en *`](https://vimhelp.org/quickfix.txt.html#%3Avimgrep) is used to find all occurences of `en` in all files in cwd (current working directory).
+- [`:copen`](https://vimhelp.org/quickfix.txt.html#%3Acopen) is used to open the quickfix window to show the quickfix list.
+
+![qflist](https://user-images.githubusercontent.com/4508793/143112529-717fb6ea-d7ab-4f87-a5da-4c0df5f2a9c4.gif)
+
+Mapping suggestions:
+```
+nnoremap <a-j> <cmd>cnext<cr>
+nnoremap <a-k> <cmd>cprev<cr>
+```
