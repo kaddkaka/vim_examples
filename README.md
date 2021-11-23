@@ -28,6 +28,9 @@ nnoremap <a-j> <cmd>cnext<cr>
 nnoremap <a-k> <cmd>cprev<cr>
 ```
 
+- `:vimgrep /def test/ **/*.py` find all matches of "def test" in all pythons files recursively from cwd.
+- [`:cdo`](https://vimhelp.org/quickfix.txt.html#%3Acdo) execute a command at each entry in the quickfix list.
+
 ### Replace only within selection
 The search [pattern atom](https://vimhelp.org/pattern.txt.html#pattern-atoms) [`\%V`](https://vimhelp.org/pattern.txt.html#%2F%5C%25V) can be used to match inside visual area. This can be used to replace only within a (rectangle) selection.
 
@@ -37,3 +40,12 @@ Mapping suggestions:
 ```
 xnoremap s :s/\%V
 ```
+
+### Delete to search motion
+Normal commands can take any [motions](https://vimhelp.org/intro.txt.html#%7Bmotion%7D) for example a search `/`. When searching and current match is displayed, use [`ctrl-g`](https://vimhelp.org/cmdline.txt.html#%2F_CTRL-G) to move to the next match.
+
+- `d/en<c-g><c-g><enter>` Will delete everything up to the 3rd match of search pattern "en".
+- Use a [search-offset](https://vimhelp.org/pattern.txt.html#search-offset) like `/e` in `d/en/e` to delete to the end of the match.
+
+![d_to_search](https://user-images.githubusercontent.com/4508793/143139836-a1ac23f4-9367-447b-867c-06b6a7c7fdc3.gif)
+
