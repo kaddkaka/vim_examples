@@ -52,3 +52,11 @@ Normal commands like [`d`](https://vimhelp.org/change.txt.html#d) can take any [
 ![d_to_search](https://user-images.githubusercontent.com/4508793/143139836-a1ac23f4-9367-447b-867c-06b6a7c7fdc3.gif)
 
 (key sequence in video: `d/en^G^G^M`)
+
+## Select what was just pasted, reselect last selection
+
+[`` `[ ``](https://vimhelp.org/motion.txt.html#%60%5B) moves to the first character of the previously changed or yanked text, [`` ]` ``](https://vimhelp.org/motion.txt.html#%60%5D) moves to the last. This means that `` `[v`]`` will visually select what was just pasted. [`gv`](https://vimhelp.org/visual.txt.html#gv) will reselect the previous selected area.
+
+![gv](https://user-images.githubusercontent.com/4508793/143313428-e6bba2f8-425b-468e-87b9-f02afcbf09b8.gif)
+
+(key sequence in video: ``viByPgg`[v`]^[jjjgv``)
