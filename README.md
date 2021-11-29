@@ -7,6 +7,8 @@
 
 (key sequence in video: `jVG^A..uuugvg^A..uuugv10g^A`)
 
+Tip: This also works with rectangle selection (`ctrl-v`).
+
 ## Replay macro on each line in visual selection
 [`:norm @q`](https://vimhelp.org/various.txt.html#%3Anorm) in visual mode will perform the normal command `@q` (play macro in register q) on each line in selection. [`qq`](https://vimhelp.org/repeat.txt.html#q) is used to record the macro.
 
