@@ -33,6 +33,15 @@ nnoremap <a-k> <cmd>cprev<cr>
 - `:vimgrep /def test/ **/*.py` find all matches of "def test" in all pythons files recursively from cwd.
 - [`:cdo`](https://vimhelp.org/quickfix.txt.html#%3Acdo) executes a command at each entry in the quickfix list.
 
+## Use `!` to run external command (e.g. sort lines)
+[Filters](https://vimhelp.org/change.txt.html#filter) can be run for example by typing
+[`!`](https://vimhelp.org/change.txt.html#!) with a visual selection. All text will be filtered
+through an external command. To sort all lines by numeric sort, use `! sort -n`.
+
+![filter in selection](sort.gif)
+
+(key sequence in video: `vip! sort -n`)
+
 ## Replace only within selection
 The search [pattern atom](https://vimhelp.org/pattern.txt.html#pattern-atoms) [`\%V`](https://vimhelp.org/pattern.txt.html#%2F%5C%25V) can be used to match inside visual area. This can be used to replace only within a (rectangle) selection.
 
