@@ -42,6 +42,18 @@ through an external command. To sort all lines by numeric sort, use `! sort -n`.
 
 (key sequence in video: `vip! sort -n`)
 
+## global: repeat a command for each line matching a pattern
+With [`:global`](https://vimhelp.org/repeat.txt.html#%3Aglobal) a command can be repeated for each
+line that matches a pattern. Default pattern is last used search pattern.
+
+ - `:g//d` deletes all lines matching the last search pattern
+ - `:g//d E` delete the same lines and appends each delete to register `e` which can be pasted with
+   `"ep`
+
+![global delete, apoend to register](global.gif)
+
+key sequence in video: `*:g//du:g//d Ep`
+
 ## Replace only within selection
 The search [pattern atom](https://vimhelp.org/pattern.txt.html#pattern-atoms) [`\%V`](https://vimhelp.org/pattern.txt.html#%2F%5C%25V) can be used to match inside visual area. This can be used to replace only within a (rectangle) selection.
 
