@@ -1,6 +1,6 @@
-100 car  ferrari
-  5 boat eka
-130 car  saab
- 20 bike DBS
- 14 car  volvo
- 80 car  mercedes
+car  100 ferrari
+boat   5 eka
+car  130 saab
+bike  20 DBS
+car   14 volvo
+car   80 mercedes

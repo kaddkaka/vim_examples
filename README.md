@@ -42,6 +42,13 @@ through an external command. To sort all lines by numeric sort, use `! sort -n`.
 
 (key sequence in video: `vip! sort -n`)
 
+## Use filtering and awk to sum all numbers in a specific column
+awk is a powerful tool, here used to some all the fields of a specific column:
+ - `:%! awk '{print; s+=$2} END {print s}'` sums the second field (`$2`) of
+   each line and prints the total at the `END`.
+
+![filter with awk](filter_awk.gif)
+
 ## global: repeat a command for each line matching a pattern
 With [`:global`](https://vimhelp.org/repeat.txt.html#%3Aglobal) a command can be repeated for each
 line that matches a pattern. Default pattern is last used search pattern.
