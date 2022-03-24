@@ -96,6 +96,15 @@ Mapping suggestion:
 nnoremap <leader>gv `[v`]
 ```
 
+## Repeat the last command line
+[`@:`](https://vimhelp.org/repeat.txt.html#%40%3A) can be used to repeat the last command line command. More convenient when mapped to a single key.
+
+Mapping suggestion:
+
+```vim
+nnoremap , @:
+```
+
 # Ideas/TODOs
 - appending to registers ([`"Ayy`](https://vimhelp.org/change.txt.html#quotea))
 - inserting literal characters ([`ctrl-v`](https://vimhelp.org/insert.txt.html#i_CTRL-V))
