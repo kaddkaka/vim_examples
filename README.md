@@ -71,7 +71,7 @@ The search [pattern atom](https://vimhelp.org/pattern.txt.html#pattern-atoms) [`
 
 (key sequence in video: `wwww^VG$se/o^M`)
 
-Mapping suggestions:
+Mapping suggestion:
 ```
 xnoremap s :s/\%V
 ```
@@ -93,3 +93,8 @@ Normal commands like [`d`](https://vimhelp.org/change.txt.html#d) can take any [
 ![gv](https://user-images.githubusercontent.com/4508793/143313428-e6bba2f8-425b-468e-87b9-f02afcbf09b8.gif)
 
 (key sequence in video: ``viByPgg`[v`]^[jjjgv``)
+
+Mapping suggestion:
+```
+nnoremap <leader>gv `[v`]
+```
