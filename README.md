@@ -95,3 +95,13 @@ Mapping suggestion:
 ```vim
 nnoremap <leader>gv `[v`]
 ```
+
+# Ideas/TODOs
+- appending to registers ([`"Ayy`](https://vimhelp.org/change.txt.html#quotea))
+- inserting literal characters ([`ctrl-v`](https://vimhelp.org/insert.txt.html#i_CTRL-V))
+- pasting from register in insert mode ([`ctrl-r`](https://vimhelp.org/insert.txt.html#i_CTRL-R))
+- batch changes (`:cdo`, [`:bufdo`](https://vimhelp.org/windows.txt.html#%3Abufdo), `:windo`, `:argdo`, `:ldo`)
+- recursive macros (`qQ@qq`)
+- changelist: go back to previous edit location ([`g;`](https://vimhelp.org/motion.txt.html#g%3B))
+- insert at previous insert location ([`gi`](https://vimhelp.org/insert.txt.html#gi))
+- normal commands in insert mode ([`ctrl-o`](https://vimhelp.org/insert.txt.html#i_CTRL-O))
