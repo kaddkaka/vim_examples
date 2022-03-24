@@ -40,8 +40,7 @@ through an external command. To sort all lines by numeric sort, use `! sort -n`.
 
 ![filter in selection](sort.gif)
 
-(key sequence in video: `vip! sort -n
-`)
+(key sequence in video: `vip! sort -n^M`)
 
 ## Use filtering and awk to sum all numbers in a specific column
 awk is a powerful tool, here used to sum all the fields of a specific column:
@@ -60,9 +59,7 @@ line that matches a pattern. Default pattern is last used search pattern.
 
 ![global delete, apoend to register](global.gif)
 
-key sequence in video: `*:g//d
-u:g//d E
-p`
+key sequence in video: `*:g//d^Mu:g//d E^Mp`
 
 ## Replace only within selection
 The search [pattern atom](https://vimhelp.org/pattern.txt.html#pattern-atoms) [`\%V`](https://vimhelp.org/pattern.txt.html#%2F%5C%25V) can be used to match inside visual area. This can be used to replace only within a (rectangle) selection.
