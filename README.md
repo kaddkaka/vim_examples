@@ -25,7 +25,7 @@ The [quickfix list](https://vimhelp.org/quickfix.txt.html#quickfix) can be popul
 ![qflist](https://user-images.githubusercontent.com/4508793/143112529-717fb6ea-d7ab-4f87-a5da-4c0df5f2a9c4.gif)
 
 Mapping suggestions:
-```
+```vim
 nnoremap <a-j> <cmd>cnext<cr>
 nnoremap <a-k> <cmd>cprev<cr>
 ```
@@ -72,7 +72,7 @@ The search [pattern atom](https://vimhelp.org/pattern.txt.html#pattern-atoms) [`
 (key sequence in video: `wwww^VG$se/o^M`)
 
 Mapping suggestion:
-```
+```vim
 xnoremap s :s/\%V
 ```
 
@@ -95,6 +95,6 @@ Normal commands like [`d`](https://vimhelp.org/change.txt.html#d) can take any [
 (key sequence in video: ``viByPgg`[v`]^[jjjgv``)
 
 Mapping suggestion:
-```
+```vim
 nnoremap <leader>gv `[v`]
 ```
