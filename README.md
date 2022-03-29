@@ -61,6 +61,11 @@ line that matches a pattern. Default pattern is last used search pattern.
 
 key sequence in video: `*:g//d<enter>` `u` `:g//d E<enter>p`
 
+ - `:g/pattern/norm @q`, play macro on each line matching pattern.
+ - `:v/;$/ s/$/;`, Add `;` to all lines that does not end in semicolon.
+
+More g power at [https://vim.fandom.com/wiki/Power_of_g](https://vim.fandom.com/wiki/Power_of_g)
+
 ## Replace only within selection
 The search [pattern atom](https://vimhelp.org/pattern.txt.html#pattern-atoms) [`\%V`](https://vimhelp.org/pattern.txt.html#%2F%5C%25V) can be used to match inside visual area. This can be used to replace only within a (rectangle) selection.
 
