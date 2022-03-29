@@ -120,15 +120,15 @@ make it recursive with the sequence `qQ@qq` (assuming your macro is in the `q`
 register)
 
 ### Recursive within line
-A movement within a line such as `f ` (f followed by space) will stop the
+A movement within a line such as ``f `` (f followed by space) will stop the
 recursive macro at the end of a line. This can be used to modify each word on a
 line in some way:
 
 1. `qq` `ciw"<c-r>-"<esc>f l@q` `q`: surround each "word" on the line in quotes
 2. `qq` `gUiw2f l@q` `q`:  upper-case every 2nd "word" on the line
 
-With both these lines visually selected, replaying macro 1 with `:norm e@q`
-will turn:
+With both lines below visually selected, replaying macro 1 from above with 
+`:norm e@q` will turn:
 ```
    Recursive over lines
 Recursive over lines
