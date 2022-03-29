@@ -14,7 +14,7 @@ Tip: This also works with rectangle selection (`ctrl-v`).
 
 ![norm_q](https://user-images.githubusercontent.com/4508793/143023739-894e32bf-c1f7-4a50-8c03-19b0771fb87b.gif)
 
-(key sequence in video: `qqIconst ^[A;^[qjVjjj:norm @q^M`, q register content: `Iconst ^[A;^[`)
+(key sequence in video: `qqIconst ^[A;^[qjVjjj:norm @q<enter>`, q register content: `Iconst ^[A;^[`)
 
 ## Navigate quickfix list
 The [quickfix list](https://vimhelp.org/quickfix.txt.html#quickfix) can be populated with locations in several ways. A key to using it effectively is to have mappings for [`:cnext`](https://vimhelp.org/quickfix.txt.html#%3Acnext) and [`:cprev`](https://vimhelp.org/quickfix.txt.html#%3Acprev).
@@ -40,7 +40,7 @@ through an external command. To sort all lines by numeric sort, use `! sort -n`.
 
 ![filter in selection](sort.gif)
 
-(key sequence in video: `vip! sort -n^M`)
+(key sequence in video: `vip! sort -n<enter>`)
 
 ## Use filtering and awk to sum all numbers in a specific column
 awk is a powerful tool, here used to sum all the fields of a specific column:
@@ -59,14 +59,14 @@ line that matches a pattern. Default pattern is last used search pattern.
 
 ![global delete, apoend to register](global.gif)
 
-key sequence in video: `*:g//d^Mu:g//d E^Mp`
+key sequence in video: `*:g//d<enter>` `u` `:g//d E<enter>p`
 
 ## Replace only within selection
 The search [pattern atom](https://vimhelp.org/pattern.txt.html#pattern-atoms) [`\%V`](https://vimhelp.org/pattern.txt.html#%2F%5C%25V) can be used to match inside visual area. This can be used to replace only within a (rectangle) selection.
 
 ![sub_in_selection](https://user-images.githubusercontent.com/4508793/143133723-69acd9ba-1516-4d21-a546-b04d9a84e622.gif)
 
-(key sequence in video: `wwww^VG$se/o^M`)
+(key sequence in video: `wwww^VG$se/o<enter>`)
 
 Mapping suggestion:
 ```vim
@@ -81,7 +81,7 @@ Normal commands like [`d`](https://vimhelp.org/change.txt.html#d) can take any [
 
 ![d_to_search](https://user-images.githubusercontent.com/4508793/143139836-a1ac23f4-9367-447b-867c-06b6a7c7fdc3.gif)
 
-(key sequence in video: `d/en^G^G^M`)
+(key sequence in video: `d/en^G^G<enter>`)
 
 ## Select what was just pasted, reselect last selection
 
