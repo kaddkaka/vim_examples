@@ -110,12 +110,54 @@ Mapping suggestion:
 nnoremap , @:
 ```
 
+## Recursive macros
+By playing the content of a register at the end of the recording, you can make
+a macro recursive. (Make sure it has a stop condition or you will have to break
+it with `<ctrl-c>`!)
+
+If you forgot to do the macro recursive while recording it the first time, you
+make it recursive with the sequence `qQ@qq` (assuming your macro is in the `q`
+register)
+
+### Recursive within line
+A movement within a line such as `f ` (f followed by space) will stop the
+recursive macro at the end of a line. This can be used to modify each word on a
+line in some way:
+
+1. `qq` `ciw"<c-r>-"<esc>f l@q` `q`: surround each "word" on the line in quotes
+2. `qq` `gUiw2f l@q` `q`:  upper-case every 2nd "word" on the line
+
+With both these lines visually selected, replaying macro 1 with `:norm e@q`
+will turn:
+```
+   Recursive over lines
+Recursive over lines
+```
+
+Into:
+```
+   "Recursive" "over" "lines"
+"Recursive" "over" "lines"
+```
+
+Mapping suggestion:
+
+```vim
+nnoremap <leader>q qqqqq
+```
+
+Questions:
+
+- What is actually different between `<ctrl-r>-` and `<ctrl-r>"`?
+- Why doesn't this mapping seem to work: `nnoremap <leader>q qqqqq`?
+- Is there a "within line" version of `:g`?
+
+
 # Ideas/TODOs
 - appending to registers ([`"Ayy`](https://vimhelp.org/change.txt.html#quotea))
 - inserting literal characters ([`ctrl-v`](https://vimhelp.org/insert.txt.html#i_CTRL-V))
 - pasting from register in insert mode ([`ctrl-r`](https://vimhelp.org/insert.txt.html#i_CTRL-R))
 - batch changes (`:cdo`, [`:bufdo`](https://vimhelp.org/windows.txt.html#%3Abufdo), `:windo`, `:argdo`, `:ldo`)
-- recursive macros (`qQ@qq`)
 - changelist: go back to previous edit location ([`g;`](https://vimhelp.org/motion.txt.html#g%3B))
 - insert at previous insert location ([`gi`](https://vimhelp.org/insert.txt.html#gi))
 - normal commands in insert mode ([`ctrl-o`](https://vimhelp.org/insert.txt.html#i_CTRL-O))
