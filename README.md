@@ -1,20 +1,14 @@
 # Builtins
 
 ## Increment numbers (incremental sequence)
-![image](https://user-images.githubusercontent.com/4508793/204096223-2e6143c3-1bf1-4000-ac53-22ef80f6b179.png)
-
-<img alt="g_ctrl_a" src="https://user-images.githubusercontent.com/4508793/142710199-0d605d4c-9d0a-42d2-976a-6d15742834b1.gif" />
-
 [`ctrl-a`](https://vimhelp.org/change.txt.html#CTRL-A) increments the number at or after the cursor, [`ctrl-x`](https://vimhelp.org/change.txt.html#CTRL-X) decrements the number. With visual selection an incremental sequence can be achieved with [`g ctrl-a`](https://vimhelp.org/change.txt.html#v_g_CTRL-A)
 
-```
-#          -- (g ctrl-a) -->
-item: 0                         item: 0
-item: 0                         item: 1
-item: 0                         item: 2
-item: 0                         item: 3
-item: 0                         item: 4
-```
+before:
+<img src="https://user-images.githubusercontent.com/4508793/204096261-8d0a9c32-3b1b-4f33-b512-0e4bf064ea1b.png" />
+after:
+<img src="https://user-images.githubusercontent.com/4508793/204096275-f8c61e95-c763-473d-a69e-393537422bce.png" />
+
+<img alt="g_ctrl_a" src="https://user-images.githubusercontent.com/4508793/142710199-0d605d4c-9d0a-42d2-976a-6d15742834b1.gif" />
 
 (key sequence in video: `jVG^A..uuugvg^A..uuugv10g^A`)
 
