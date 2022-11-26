@@ -1,6 +1,8 @@
 # Builtins
 
 ## Increment numbers (incremental sequence)
+![image](https://user-images.githubusercontent.com/4508793/204096189-deae9e9a-e73c-404e-a54c-f80de6311ad2.png)
+
 <img alt="g_ctrl_a" src="https://user-images.githubusercontent.com/4508793/142710199-0d605d4c-9d0a-42d2-976a-6d15742834b1.gif" />
 
 [`ctrl-a`](https://vimhelp.org/change.txt.html#CTRL-A) increments the number at or after the cursor, [`ctrl-x`](https://vimhelp.org/change.txt.html#CTRL-X) decrements the number. With visual selection an incremental sequence can be achieved with [`g ctrl-a`](https://vimhelp.org/change.txt.html#v_g_CTRL-A)
