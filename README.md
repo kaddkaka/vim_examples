@@ -1,7 +1,7 @@
 # Builtins
 
 ## Increment numbers (incremental sequence)
-![image](https://user-images.githubusercontent.com/4508793/204096189-deae9e9a-e73c-404e-a54c-f80de6311ad2.png)
+![image](https://user-images.githubusercontent.com/4508793/204096223-2e6143c3-1bf1-4000-ac53-22ef80f6b179.png)
 
 <img alt="g_ctrl_a" src="https://user-images.githubusercontent.com/4508793/142710199-0d605d4c-9d0a-42d2-976a-6d15742834b1.gif" />
 
