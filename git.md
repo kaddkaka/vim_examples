@@ -29,8 +29,8 @@ nnoremap gb <cmd>Git blame<cr>
 ```
 
 # fzf
-fzf has the hand command `:Gfiles` to quickly find files in a git repo. I also have `:Files %:h`
-mapped to quickly find other files in the same folder as the current file.
+[fzf](https://github.com/junegunn/fzf)'s vim plugin has the handy command `:Gfiles` to quickly find files in a git repo.
+I also have `:Files %:h` mapped to quickly find other files in the same folder as the current file.
 
 Related config:
 ```vim
