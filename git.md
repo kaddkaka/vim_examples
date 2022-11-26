@@ -54,3 +54,19 @@ bind diff R !git rebase -i %(commit) --keep-empty
 bind main S !git rebase -i %(commit) --autosquash
 bind diff S !git rebase -i %(commit) --autosquash
 ```
+
+When I want to fix comments from a Merge Review I have a custom script bound to `E` that starts a rebase edit session 
+with all changes of that commit in quickfix list with git-jump.
+
+```
+bind main E <tig_edit %(commit)
+bind diff E <tig_edit %(commit)
+```
+
+```bash
+#!/bin/bash
+echo "Editing: $1"
+GIT_EDITOR='sed -i 1s/pick/edit/' git rebase -i "$1"~
+git jump diff HEAD~
+git commit -a --fixup=HEAD --no-edit
+```
