@@ -43,7 +43,7 @@ map <leader>l <cmd>Files %:h<cr>
 ```
 
 # tig
-I use tig to get an overview the commit history. It has builtin mapping for pressing `e` at a change in a 
+I use [tig](https://github.com/jonas/tig) to get an overview the commit history. It has builtin mapping for pressing `e` at a change in a 
 diff to immediately open vim at that locaiton.
 
 I have some bindings for quickly rebasing the top of my commit history:
