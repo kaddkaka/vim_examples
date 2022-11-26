@@ -1,9 +1,18 @@
 # Builtins
 
 ## Increment numbers (incremental sequence)
-[`ctrl-a`](https://vimhelp.org/change.txt.html#CTRL-A) increments the number at or after the cursor, [`ctrl-x`](https://vimhelp.org/change.txt.html#CTRL-X) decrements the number. With visual selection an incremental sequence can be achieved with [`g ctrl-a`](https://vimhelp.org/change.txt.html#v_g_CTRL-A):
+<img alt="g_ctrl_a" src="https://user-images.githubusercontent.com/4508793/142710199-0d605d4c-9d0a-42d2-976a-6d15742834b1.gif" />
 
-![g_ctrl_a](https://user-images.githubusercontent.com/4508793/142710199-0d605d4c-9d0a-42d2-976a-6d15742834b1.gif)
+[`ctrl-a`](https://vimhelp.org/change.txt.html#CTRL-A) increments the number at or after the cursor, [`ctrl-x`](https://vimhelp.org/change.txt.html#CTRL-X) decrements the number. With visual selection an incremental sequence can be achieved with [`g ctrl-a`](https://vimhelp.org/change.txt.html#v_g_CTRL-A)
+
+```
+#          -- (g ctrl-a) -->
+item: 0                         item: 0
+item: 0                         item: 1
+item: 0                         item: 2
+item: 0                         item: 3
+item: 0                         item: 4
+```
 
 (key sequence in video: `jVG^A..uuugvg^A..uuugv10g^A`)
 
@@ -35,7 +44,7 @@ nnoremap <a-k> <cmd>cprev<cr>
 
 ## Use `!` to run external command (e.g. sort lines)
 [Filters](https://vimhelp.org/change.txt.html#filter) can be run for example by typing
-[`!`](https://vimhelp.org/change.txt.html#!) with a visual selection. All text will be filtered
+[`!`](https://vimhelp.org/change.txt.html#%21) with a visual selection. All text will be filtered
 through an external command. To sort all lines by numeric sort, use `! sort -n`.
 
 ![filter in selection](sort.gif)
