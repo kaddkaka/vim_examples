@@ -107,13 +107,24 @@ nnoremap <leader>gv `[v`]
 ```
 
 ## Repeat the last command line
-[`@:`](https://vimhelp.org/repeat.txt.html#%40%3A) can be used to repeat the last command line command. More convenient when mapped to a single key.
-
-Mapping suggestion:
+[`@:`](https://vimhelp.org/repeat.txt.html#%40%3A) can be used to repeat the last command line command. More convenient when mapped to a single key and I have currently chosen `,` as my repeat-command key. `,` is used to reverse search the lastest `fFtT` motion, but I seldom use it so I have a mapping that shadows this bulitin:
 
 ```vim
 nnoremap , @:
 ```
+
+Alternative mapping suggestions might be the following, but I know I sometimes want to perform `j` `repeat-command` `j` `repeat-command` in fast succession.
+```
+nnoremap <a-.> @:
+nnoremap <leader>. @:
+```
+
+## Retrieve the word under cursor
+`ctrl-r` can be used in insert mode and the command line to insert contents of registers, but also some other stuff like the word under the cursor!
+
+Using `<c-r><c-w>` will put the current word under cursor where you are at, but if you want to do this in a command you dont want this combination to "expand" immediately but rather when you execute the command. I asked a question about this at [reddit](https://www.reddit.com/r/vim/comments/1183ygn/is_it_possible_to_fetch_the_text_under_cursor/), and got replies from Fantastic_Cow7272 and yegappanl that led me to this kind of command:
+
+- `:!git show <cword>`: Run this with the cursor on a commit hash (for example in a git rebase `edit-todo` file) to show git information about that commit.
 
 ## Recursive macros
 By playing the content of a register at the end of the recording, you can make
