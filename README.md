@@ -41,11 +41,11 @@ nnoremap <a-k> <cmd>cprev<cr>
 ## Use `!` to run external command (e.g. sort lines)
 [Filters](https://vimhelp.org/change.txt.html#filter) can be run for example by typing
 [`!`](https://vimhelp.org/change.txt.html#%21) with a visual selection. All text will be filtered
-through an external command. To sort all lines by numeric sort, use `! sort -n`.
+through an external command. To sort all lines by numeric sort, use `!sort -n`.
 
 ![filter in selection](sort.gif)
 
-(key sequence in video: `vip! sort -n<enter>`)
+(key sequence in video: `vip!sort -n<enter>`)
 
 ## Use filtering and awk to sum all numbers in a specific column
 awk is a powerful tool, here used to sum all the fields of a specific column:
@@ -95,7 +95,7 @@ Normal commands like [`d`](https://vimhelp.org/change.txt.html#d) can take any [
 
 ## Select what was just pasted, reselect last selection
 
-[`` `[ ``](https://vimhelp.org/motion.txt.html#%60%5B) moves to the first character of the previously changed or yanked text, [`` ]` ``](https://vimhelp.org/motion.txt.html#%60%5D) moves to the last. This means that `` `[v`]`` will visually select what was just pasted. [`gv`](https://vimhelp.org/visual.txt.html#gv) will reselect the previous selected area.
+[`` `[ ``](https://vimhelp.org/motion.txt.html#%60%5B) moves to the first character of the previously changed or yanked text, [`` ]` ``](https://vimhelp.org/motion.txt.html#%60%5D) moves to the last. This means that `` `[v`] `` will visually select what was just pasted. [`gv`](https://vimhelp.org/visual.txt.html#gv) will reselect the previous selected area.
 
 ![gv](https://user-images.githubusercontent.com/4508793/143313428-e6bba2f8-425b-468e-87b9-f02afcbf09b8.gif)
 
