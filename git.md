@@ -1,4 +1,12 @@
-I mostly use git form the command line, but there are some vim-git integrations that I really like:
+I mostly use git from the command line, but there are some vim-git integrations that I really like, listed below.
+
+For the repository where I spend the majority of my working time, I use `git worktree`s to manage several ongoing items:
+
+ * `main` - worktree that tracks the main branch
+ * `feature` - current feature work
+ * `review` - for code review
+ * `tmp`
+ * `hack`
 
 # git-jump
 The git source contains several peripheral tools, [git-jump](https://github.com/git/git/blob/master/contrib/git-jump/git-jump) 
