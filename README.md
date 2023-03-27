@@ -107,7 +107,7 @@ nnoremap <leader>gv `[v`]
 ```
 
 ## Repeat the last command line
-[`@:`](https://vimhelp.org/repeat.txt.html#%40%3A) can be used to repeat the last command line command. More convenient when mapped to a single key and I have currently chosen `,` as my repeat-command key. `,` is used to reverse search the lastest `fFtT` motion, but I seldom use it so I have a mapping that shadows this bulitin:
+[`@:`](https://vimhelp.org/repeat.txt.html#%40%3A) can be used to repeat the last command line command. More convenient when mapped to a single key and I have currently chosen `,` as my repeat-command key. `,` is used to repeat the last `fFtT` motion in reverse direction, but I seldom use it so I have a mapping that shadows this builtin:
 
 ```vim
 nnoremap , @:
