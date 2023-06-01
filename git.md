@@ -29,9 +29,7 @@ The parts of [vim-fugitive](https://github.com/tpope/vim-fugitive) I use the mos
 
 Related config:
 ```vim
-Plug 'tpope/vim-fugitive'                               
-Plug 'https://github.com/tommcdo/vim-fugitive-blame-ext'
-
+Plug 'tpope/vim-fugitive'          
 nnoremap <leader>g :Ggrep -q <c-r><c-w>
 nnoremap gb <cmd>Git blame<cr>
 ```
