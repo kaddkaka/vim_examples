@@ -62,7 +62,7 @@ line that matches a pattern. Default pattern is last used search pattern.
  - `:g//d E` delete the same lines and appends each delete to register `e` which can be pasted with
    `"ep`
 
-![global delete, apoend to register](global.gif)
+![global delete, append to register](global.gif)
 
 key sequence in video: `*:g//d<enter>` `u` `:g//d E<enter>p`
 
@@ -89,7 +89,7 @@ Normal commands like [`d`](https://vimhelp.org/change.txt.html#d) can take any [
 - `d/en<c-g><c-g><enter>` Will delete everything up to the 3rd match of search pattern "en".
 - Use a [search-offset](https://vimhelp.org/pattern.txt.html#search-offset) like `/e` in `d/en/e` to delete to the end of the match.
 
-![d_to_search](https://user-images.githubusercontent.com/4508793/143139836-a1ac23f4-9367-447b-867c-06b6a7c7fdc3.gif)
+![d to search](https://user-images.githubusercontent.com/4508793/143139836-a1ac23f4-9367-447b-867c-06b6a7c7fdc3.gif)
 
 (key sequence in video: `d/en^G^G<enter>`)
 
@@ -143,7 +143,7 @@ line in some way:
 1. `qq` `ciw"<c-r>-"<esc>f l@q` `q`: surround each "word" on the line in quotes
 2. `qq` `gUiw2f l@q` `q`:  upper-case every 2nd "word" on the line
 
-With both lines below visually selected, replaying macro 1 from above with 
+With both lines below visually selected, replaying macro 1 from above with
 `:norm e@q` will turn:
 ```
    Recursive over lines
@@ -168,6 +168,18 @@ Questions:
 - Why doesn't this mapping seem to work: `nnoremap <leader>q qqqqq`?
 - Is there a "within line" version of `:g`?
 
+## Repeat last change in all of file ("global repeat", similar to g&)
+
+[`ctrl-r` in insert mode](https://vimhelp.org/insert.txt.html#i_CTRL-R) can be
+used to insert the same text as last time. With this kind mapping you can easily
+repeat a modification like `ciw` (change in word) in all of the document.
+
+![global repeat](global_replace.gif)
+
+Mapping suggestion:
+```vim
+nnoremap g. :%s//./&<esc>
+```
 
 # Ideas/TODOs
 - appending to registers ([`"Ayy`](https://vimhelp.org/change.txt.html#quotea))
