@@ -171,14 +171,15 @@ Questions:
 ## Repeat last change in all of file ("global repeat", similar to g&)
 
 [`ctrl-r` in insert mode](https://vimhelp.org/insert.txt.html#i_CTRL-R) can be
-used to insert the same text as last time. With this kind mapping you can easily
-repeat a modification like `ciw` (change in word) in all of the document.
+used to insert the same text as last time with the dot (`.`) register. With this
+kind mapping you can easily repeat a modification like `ciw` (change in word) in
+all of the document.
 
 ![global repeat](global_replace.gif)
 
 Mapping suggestion:
 ```vim
-nnoremap g. :%s//<ctrl+r>./&<esc>
+nnoremap g. :%s//<ctrl/r>./&<esc>
 nnoremap g. :%s//./&<esc>
 ```
 
