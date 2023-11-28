@@ -178,6 +178,7 @@ repeat a modification like `ciw` (change in word) in all of the document.
 
 Mapping suggestion:
 ```vim
+nnoremap g. :%s//<ctrl+r>./&<esc>
 nnoremap g. :%s//./&<esc>
 ```
 
