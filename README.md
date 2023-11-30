@@ -179,8 +179,7 @@ all of the document.
 
 Mapping suggestion:
 ```vim
-nnoremap g. :%s//<ctrl/r>./&<esc>
-nnoremap g. :%s//./&<esc>
+nnoremap g. :%s//<c-r>./g<esc>
 ```
 
 # Ideas/TODOs
