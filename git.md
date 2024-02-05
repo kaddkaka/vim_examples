@@ -8,6 +8,8 @@ For the repository where I spend the majority of my working time, I use `git wor
  * `tmp`
  * `hack`
 
+These worktrees share one `.git` (only need to fetch once, and saves disk space compared to having several full clones) and they also share one stash (which means I can `git stash` in one worktree and `git stash pop` in another).
+
 # git-jump
 The git source contains several peripheral tools, [git-jump](https://github.com/git/git/blob/master/contrib/git-jump/git-jump) 
 is one of them. It can be used to start vim with a bunch of location loaded into quickfix list:
