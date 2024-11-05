@@ -8,7 +8,13 @@ For the repository where I spend the majority of my working time, I use `git wor
  * `tmp`
  * `hack`
 
+The worktrees are added from the primary worktree with `git worktree add ../feature` and they let me have several branches checked out at the same time. I don't create new worktrees, I reuse the ones I have. 
+
 These worktrees share one `.git` (only need to fetch once, and saves disk space compared to having several full clones) and they also share one stash (which means I can `git stash` in one worktree and `git stash pop` in another).
+
+`git branch -vv` lists all my local branches and in what worktree they are checked out in.
+
+To review a branch I use `git switch -d origin/feature_A_from_coworker` to avoid creating a local copy of the branch.
 
 # git-jump
 The git source contains several peripheral tools, [git-jump](https://github.com/git/git/blob/master/contrib/git-jump/git-jump) 
