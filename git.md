@@ -2,7 +2,7 @@ I mostly use git from the command line, but there are some vim-git integrations 
 
 For the repository where I spend the majority of my working time, I use `git worktree`s to manage several ongoing items:
 
- * `main` - worktree that tracks the main branch
+ * `main` - worktree that tracks the main branch (readonly intention) 
  * `feature` - current feature work
  * `review` - for code review
  * `tmp`
