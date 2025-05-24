@@ -8,11 +8,11 @@ For the repository where I spend the majority of my working time, I use `git wor
  * `tmp`
  * `hack`
 
-The worktrees are added from the primary worktree with `git worktree add ../feature` and they let me have several branches checked out at the same time. I don't create new worktrees, I reuse the ones I have.
+The worktrees are added from the primary worktree (e.g. `git worktree add ../feature`) and they let me have several branches checked out at the same time. I don't create new worktrees, I reuse the ones I have.
 
 To work on a new feature I `cd` to `feature/`, create a new branch and launch my editor from there. 
 
-These worktrees share one `.git` (only need to fetch once, and saves disk space compared to having several full clones) and they also share one stash (which means I can `git stash` in one worktree and `git stash pop` in another).
+These worktrees share one `.git` (only need to fetch once, and saves disk space compared to having several full clones) and they also share one stash (which means I can `git stash` in one worktree and `git stash pop` in another). They also share the same settings and git hooks. 
 
 `git branch -vv` lists all my local branches and in what worktree they are checked out in.
 
@@ -86,3 +86,5 @@ GIT_EDITOR='sed -i 1s/pick/edit/' git rebase -i "$1"~
 git jump diff HEAD~
 git commit -a --fixup=HEAD --no-edit
 ```
+
+This has the upside of fixing the code directly on the correct commit, reducing the total number of merge/rebase conflicts. 
