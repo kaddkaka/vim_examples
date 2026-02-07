@@ -27,12 +27,27 @@ is one of them. It can be used to start vim with a bunch of location loaded into
 - `git jump diff` revisit all positions of unstaged changes
 - `git jump diff HEAD~`
 
+# low-tech way of solving merge conflicts
+1. `git rebase -i origin/main` \- Do a rebase and get a conflict
+2. `git jump merge`\* \- Open Neovim with conflict places loaded into quickfix list
+3. Solve the first using [https://github.com/inkarkat/vim-ConflictMotions](https://github.com/inkarkat/vim-ConflictMotions)
+4. `:cnext` (mapped with `nnoremap <a-j> <cmd>cnext<cr>`) to go the next conflict, repeat from 3 until done.
+
+`.gitconfig`:
+```gitconfig
+    core.editor = nvim
+    [merge]
+    ff=false
+    conflictStyle=diff3   # <-- imo makes it much easier to understand the conflict.
+```
+I tried `merge.tool=nvimdiff` a little bit, but it's annoying that it goes to every changed place, not just the unresolved conflicts.
+
 # vim-fugitive
 The parts of [vim-fugitive](https://github.com/tpope/vim-fugitive) I use the most:
 
 - `:Ggrep banana` - find all bananas in the repo
 - `:Git blame`, mappings:
-  - `P` reblame at `commit~`
+  - `P`/`~` reblame at `commit~`
   - `o` view the patch
 - `:Gvsplit main:%` - inspect the current file's state at branch "main"
 - `:Gdiffsplit main:%` compare with main branch
@@ -43,6 +58,10 @@ Plug 'tpope/vim-fugitive'
 nnoremap <leader>g :Ggrep -q <c-r><c-w>
 nnoremap gb <cmd>Git blame<cr>
 ```
+
+# reviewing a branch
+I review a git branch using my own command git-review: https://github.com/kaddkaka/dotfiles/blob/main/bin/executable_git-review
+It utilizes fugitive command `:GcLog` to load commits into quickfix list.
 
 # fzf
 [fzf](https://github.com/junegunn/fzf)'s vim plugin has the handy command `:Gfiles` to quickly find files in a git repo.
